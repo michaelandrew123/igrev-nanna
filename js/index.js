@@ -1,12 +1,7 @@
-
-var wis = window.innerHeight;
-var dh = $(document).height();
-var bodyH = $('body').height();
-
-
 /*Library Archived*/
 $('#library-archived > button').on('touchstart', function(){   
-	var data = $(this).attr('rel');
+	var data = $(this).attr('rel');  
+	
 	$('div.thumbnail-panel.show').removeClass('show');
 	$('#library-archived > button.bg-sky-500').removeClass('bg-sky-500') 
 	$(this).addClass('bg-sky-500'); 
@@ -20,7 +15,7 @@ $('#adding-archived > a').on('touchstart', function(){
 
 
 /*Library Panel*/
-$('#library-panel > button').on('touchstart', function(){
+$('#library-panel > button').on('touchstart', function(){  
 	var data = $(this).attr('rel'); 
 	$('#library-panel > button.bg-sky-500').removeClass('bg-sky-500') 
 	$(this).addClass('bg-sky-500'); 
@@ -50,7 +45,7 @@ $('ul#sort-items > li > a').on('touchstart', function(){
 
 /*Add Archived Thumbnail*/
 $('div#add-archived-thumbnail > ul > li > div > img').on('touchstart', function(){
-    var data = $(this).attr('rel');
+	var data = $(this).attr('rel');
 	$('div.add-archived.show').removeClass('show');
 	$('div.thumbnail-panel.show').removeClass('show');
 	$('.'+data).addClass('show');  
@@ -58,7 +53,7 @@ $('div#add-archived-thumbnail > ul > li > div > img').on('touchstart', function(
 })
 
 
-
+ 
 /* sub page */
 $('ul#sort-items1 > li > a').on('touchstart', function(){ 
 	$('p.sort-text1').text($(this).text());
@@ -73,46 +68,10 @@ $('ul#sort-items2 > li > a').on('touchstart', function(){
 
 
 
-//
-//
-// $('body').on('touchmove', function() {
-//
-//     var wis = window.innerHeight + window.scrollY;
-//     var dh = $(document).height();
-//
-//     //
-//     // console.log('inner height: '+ (window.innerHeight - window.scrollY) );
-//     // console.log('inner scrolly: '+window.scrollY );
-//     // console.log('body: '+ $('body').height());
-//     if ((window.innerHeight - window.scrollY) >= $('body').height()) {
-//         $('#footer-menu').addClass('footer-fixed');
-//     }else{
-//         $('#footer-menu').removeClass('footer-fixed');
-//
-//     }
-// });
 
-//
-// console.log("window height : " + $( window ).height());
-//
-// console.log("body height : " + $('body').height());
-var footerFixedH = $('#footer-menu').height(); //not used
-console.log($('#body-f-screen').height());
-$( window ).scroll(function() {
-     wisT = wis + window.scrollY;
 
-	// if($('#library-main-page').height() > 0){
-     //    dh = $('#library-main-page').height() + $('nav').height();
-	// }
-
-	if($('.page').height() > 0){
-        dh = $('.page').height() + $('nav').height();
-	}
-    if (wisT < dh) {
-        $('#footer-menu').addClass('footer-fixed');
-    }else{
-        $('#footer-menu').removeClass('footer-fixed');
-
-    }
-});
-
+/* Heart Icons */
+// const icon = document.querySelector("#heart-icon");
+// icon.onclick = () => {
+// 	icon.classList.toggle("filled");
+// };

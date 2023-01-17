@@ -1,4 +1,4 @@
-<div class="thumbnail-panel thumbnail-panel-quiz pt-6 hidden">
+<div class="thumbnail-panel thumbnail-panel-quiz mt-6 hidden">
 	
 	<div class="flex flex-col gap-3">
 		<div class="flex flex-row gap-2 items-stretch ">
@@ -7,7 +7,7 @@
 			<div class="flex flex-col w-6/12 flex-1 justify-between">
 				<!-- Share icon -->
 				<div class="flex flex-end justify-end">
-					<img class="w-5 h-5"  src="./nanna/img/share.png" />
+					<img class="w-5 h-5"  src="./img/share.png" />
 				</div>
 				<!-- Title -->
 				<div class="flex flex-col">
@@ -32,7 +32,7 @@
 	<div class="mt-3">
 		<div class="flex flex-row justify-between font-semibold">
 			<div>Content Summary</div>
-			<img class="w-5 h-5" src="./nanna/img/right-arrows.png" />
+			<img class="w-5 h-5" src="./img/right-arrows.png" />
 		</div>
 		<div class="px-2 mt-1">
 			Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla
@@ -43,7 +43,7 @@
 	<div class="mt-3">
 		<div class="flex flex-row justify-between font-semibold">
 			<div>About Aiden KIM</div>
-			<img class="w-5 h-5" src="./nanna/img/right-arrows.png"  />
+			<img class="w-5 h-5" src="./img/right-arrows.png"  />
 		</div>
 		<div class="px-2 mt-1">
 			Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla
@@ -80,13 +80,13 @@
 	<div class="mt-3">
 		<div class="flex flex-row justify-between">
 			<div>Reply</div>
-			<img class="w-5 h-5" src="./nanna/img/right-arrows.png"  />
+			<img class="w-5 h-5" src="./img/right-arrows.png"  />
 		</div>
 		<div> 
 
 			<div class="flex flex-row gap-2 mt-3"> 
 				<div class=" ">  
-					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./nanna/img/user-solid.svg" />
+					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./img/user-solid.svg" /> 
 				</div> 
 				<div class=" 2">
 					<div class="flex flex-row justify-between">
@@ -95,7 +95,7 @@
 							<small class="text-gray-400"s>3min ago</small>
 						</div>
 						<div> 
-		        			<img class="w-5 h-5"  src="./nanna/img/ellipsis-solid.svg" />
+		        			<img class="w-5 h-5"  src="./img/ellipsis-solid.svg" />  
 						</div>
 					</div>
 	 				<div>
@@ -103,7 +103,7 @@
 	 				</div>
 	 				<div class="flex flex-row gap-1 text-gray-400"> 
 	 					<div class="heart-icon">
-						 	<img class="w-5 h-5" src="./nanna/img/heart.png" />
+						 	<img class="w-5 h-5" src="./img/heart.png" />
 						</div>
 	 					<div>13</div>
 	 				</div> 
@@ -112,7 +112,7 @@
 
 			<div class="flex flex-row gap-2 mt-3"> 
 				<div class=" ">  
-					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./nanna/img/user-solid.svg" />
+					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./img/user-solid.svg" /> 
 				</div> 
 				<div class=" 2">
 					<div class="flex flex-row justify-between">
@@ -121,7 +121,7 @@
 							<small class="text-gray-400"s>3min ago</small>
 						</div>
 						<div> 
-		        			<img class="w-5 h-5"  src="./nanna/img/ellipsis-solid.svg" />
+		        			<img class="w-5 h-5"  src="./img/ellipsis-solid.svg" />  
 						</div>
 					</div>
 	 				<div>
@@ -129,7 +129,7 @@
 	 				</div>
 	 				<div class="flex flex-row gap-1 text-gray-400"> 
 	 					<div class="heart-icon">
-						 	<img class="w-5 h-5" src="./nanna/img/heart.png" />
+						 	<img class="w-5 h-5" src="./img/heart.png" />
 						</div>
 	 					<div>13</div>
 	 				</div> 
@@ -138,7 +138,7 @@
 	 
 			<div class="flex flex-row gap-2 mt-3"> 
 				<div class=" ">  
-					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./nanna/img/user-solid.svg" />
+					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./img/user-solid.svg" /> 
 				</div> 
 				<div class=" 2">
 					<div class="flex flex-row justify-between">
@@ -147,7 +147,7 @@
 							<small class="text-gray-400"s>3min ago</small>
 						</div>
 						<div> 
-		        			<img class="w-5 h-5"  src="./nanna/img/ellipsis-solid.svg" />
+		        			<img class="w-5 h-5"  src="./img/ellipsis-solid.svg" />  
 						</div>
 					</div>
 	 				<div>
@@ -155,7 +155,7 @@
 	 				</div>
 	 				<div class="flex flex-row gap-1 text-gray-400"> 
 	 					<div class="heart-icon">
-						 	<img class="w-5 h-5" src="./nanna/img/heart.png" />
+						 	<img class="w-5 h-5" src="./img/heart.png" />
 						</div>
 	 					<div>13</div>
 	 				</div> 
@@ -164,7 +164,7 @@
 
 			<div class="flex flex-row gap-2 mt-3"> 
 				<div class=" ">  
-					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./nanna/img/user-solid.svg" />
+					<img class="w-14 bg-gray-200 p-2 border rounded-full border-slate-900" src="./img/user-solid.svg" /> 
 				</div> 
 				<div class=" 2">
 					<div class="flex flex-row justify-between">
@@ -173,7 +173,7 @@
 							<small class="text-gray-400"s>3min ago</small>
 						</div>
 						<div> 
-		        			<img class="w-5 h-5"  src="./nanna/img/ellipsis-solid.svg" />
+		        			<img class="w-5 h-5"  src="./img/ellipsis-solid.svg" />  
 						</div>
 					</div>
 	 				<div>
@@ -181,7 +181,7 @@
 	 				</div>
 	 				<div class="flex flex-row gap-1 text-gray-400"> 
 	 					<div class="heart-icon">
-						 	<img class="w-5 h-5" src="./nanna/img/heart.png" />
+						 	<img class="w-5 h-5" src="./img/heart.png" />
 						</div>
 	 					<div>13</div>
 	 				</div> 
@@ -196,7 +196,7 @@
 	<div class="mt-6">
 		<div class="flex flex-row justify-between">
 			<div>Random Text</div>
-			<img class="w-5 h-5" src="./nanna/img/right-arrows.png"  />
+			<img class="w-5 h-5" src="./img/right-arrows.png"  />
 		</div>
 		<div class="relative mt-3">
 			<ul class="flex flex-row gap-2 overflow-x-auto min-[639px]:overflow-x-auto ">   
