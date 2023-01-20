@@ -19,7 +19,8 @@
     <!-- swiper -->
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/swiper.css">
-
+    <!-- star -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
@@ -269,41 +270,60 @@
 
                 <ul class="library-panel-section grid grid-rows-2 grid-flow-col gap-2 overflow-x-auto min-[639px]:overflow-x-auto  ">
                     <li>
-                        <img class="w-full rounded-lg" src="https://file.kinolights.com/m/article_list/202301/17/3f51d291-43ee-433b-90f8-5cf0b65e3e5c.png" alt="Mountain">
+                        <img class="w-full h-[7rem]  rounded-lg" src="https://cdn.vox-cdn.com/thumbor/HXwq0C1ADjVAGMG2XMJo5dMbEF4=/0x0:5316x3460/1200x0/filters:focal(0x0:5316x3460):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/16234951/jw3_d42_13875_r.jpg" alt="Mountain">
                         <div class="px-0 py-2 ">
-                            <div class=" mb-0">Mountain</div>
+                            <div class=" mb-0">John Wick 3</div>
                             <p class="text-gray-700 text-base">
-                                Wiki
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star text-[#ffc45f]" ></span>
+                            <span class="fa fa-star"></span>    Rating
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <img class="w-full rounded-lg" src="https://file.kinolights.com/m/article_list/202301/13/6e7314c1-7cef-48a2-93cb-245ea3825c08.jpeg" alt="Mountain">
+                        <img class="w-full h-[7rem]  rounded-lg" src="https://cdn.vox-cdn.com/thumbor/ab7GeC585ehvC-Y4zEkqUcwOa9c=/0x0:2067x1377/1200x800/filters:focal(869x524:1199x854)/cdn.vox-cdn.com/uploads/chorus_image/image/54120135/your_name_oped.0.jpg" alt="Mountain">
                         <div class="px-0 py-2">
-                            <div class=" mb-0">Mountain</div>
+                            <div class=" mb-0">Your Name</div>
                             <p class="text-gray-700 text-base">
-                                Wiki
+                             <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star " ></span>
+                            <span class="fa fa-star"></span>
+                                Rating
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <img class="w-full rounded-lg" src="https://file.kinolights.com/m/article_list/202301/12/29801501-1b33-4701-af97-5524e3352d9b.jpeg" alt="Mountain">
+                        <img class="w-full h-[7rem] rounded-lg" src="https://6.vikiplatform.com/image/bf7da81a765c41fa944630749205f3ec.jpg?x=b&a=0x0" 
+                        alt="Mountain">
                         <div class="px-0 py-2">
-                            <div class=" mb-0">Mountain</div>
-                            <p class="text-gray-700 text-base">
-                                Quiz
+                            
+                             <div class=" mb-0">Train to Busan</div>
+                           <p class="text-gray-700 text-base">
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star text-[#ffc45f]" ></span>
+                            <span class="fa fa-star"></span>   Rating
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <img class="w-full rounded-lg" src="https://file.kinolights.com/m/article_list/202212/30/1dcefeea-973c-4776-80e1-2b94cba0c116.png" alt="Mountain">
+                        <img class="w-full h-[7rem] rounded-lg" src="https://material.asset.catchplay.com/NBC-IN-001-A1187/artworks/posters/NBC-IN-001-A1187-P1200.jpg?hash=1656562667" alt="Mountain">
                         <div class="px-0 py-2">
-                            <div class=" mb-0">Mountain</div>
+                            <div class="text-[14.7px] mb-0">How to train your dragon</div>
                             <p class="text-gray-700 text-base">
-                                Quiz
+                               <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star checked text-[#ffc45f]"></span>
+                            <span class="fa fa-star text-[#ffc45f]" ></span>
+                            <span class="fa fa-star"></span> Rating
                             </p>
                         </div>
                     </li>
