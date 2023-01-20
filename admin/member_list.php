@@ -41,6 +41,7 @@ $sql = " select count(*) as cnt {$sql_common} {$sql_search} {$sql_order} ";
 $row = sql_fetch($sql);
 $total_count = $row['cnt'];
 
+
 $rows = $config['cf_page_rows'];
 $total_page  = ceil($total_count / $rows);  // 전체 페이지 계산
 if ($page < 1) $page = 1; // 페이지가 없으면 첫 페이지 (1 페이지)
@@ -129,6 +130,7 @@ $colspan = 16;
                     <th scope="col" id="mb_list_mobile">휴대폰</th>
                     <th scope="col" id="mb_list_lastcall"><?php echo subject_sort_link('mb_today_login', '', 'desc') ?>최종접속</a></th>
                     <th scope="col" id="mb_list_grp">접근그룹</th>
+                    <th scope="col" rowspan="2">신고 받은 횟수</th>
                     <th scope="col" rowspan="2" id="mb_list_mng">관리</th>
                     <th scope="col" id="" rowspan="2"><?php echo subject_sort_link('mb_point', '', 'desc') ?> 컨텐츠</a></th>
                 </tr>
@@ -150,6 +152,10 @@ $colspan = 16;
                     // 접근가능한 그룹수
                     $sql2 = " select count(*) as cnt from {$g5['group_member_table']} where mb_id = '{$row['mb_id']}' ";
                     $row2 = sql_fetch($sql2);
+                    $sql3 = " select count(*) as cmr from nan_member_report where mr_mb_no ='{$row['mb_no']}' ";
+                    $row3 = sql_fetch($sql3);
+                    $cmr_count = $row3['cmr'];
+
                     $group = '';
                     if ($row2['cnt'])
                         $group = '<a href="./boardgroupmember_form.php?mb_id=' . $row['mb_id'] . '">' . $row2['cnt'] . '</a>';
@@ -260,6 +266,7 @@ $colspan = 16;
                         <td headers="mb_list_mobile" class="td_tel"><?php echo get_text($row['mb_hp']); ?></td>
                         <td headers="mb_list_lastcall" class="td_date"><?php echo substr($row['mb_today_login'], 2, 8); ?></td>
                         <td headers="mb_list_grp" class="td_numsmall"><?php echo $group ?></td>
+                        <td rowspan="2"><?php echo number_format($cmr_count) ?></td>
                         <td headers="mb_list_mng" rowspan="2" class="td_mng td_mng_s"><?php echo $s_mod ?><?php echo $s_grp ?></td>
                         <td rowspan="2"><?php echo $s_con ?></td>
                     </tr>

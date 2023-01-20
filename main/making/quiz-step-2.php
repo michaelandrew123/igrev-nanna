@@ -26,10 +26,10 @@
 
 			<div class="flex flex-col gap-10" id="quiz-step2-btn">
 				<a href="./multiple-quiz-step-1.php">
-		   			<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Multiple</div> 
+		   			<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Multiple(객관식)</div> 
 		   		</a>
 
-		   		<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight  uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Subjective</div> 
+		   		<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight  uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Subjective(주관식)</div> 
 		     </div>
 		</div>
 	</div>  

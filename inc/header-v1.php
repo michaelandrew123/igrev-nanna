@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 
 
-<script src="/js/slick.min.js"></script>
+<script src="../js/slick.min.js"></script>
 
 
 	<script src="https://cdn.tailwindcss.com"></script>

@@ -1,10 +1,11 @@
 <!-- Header Section -->
 <?php
-require_once "./inc/header.php";
+
 ?>
 </style>
 <?php
 include_once('./_common.php');
+require_once "./inc/header.php";
 include_once('./_head.sub.php');
 
 $sql = " select *,FN_CODE('quiz_type',a.quiz_type) quiz_type_name from nan_quiz a left join nan_quiz_data_file b on b.file_idx = a.file_id where a.del_yn = 'n' limit 0,5  ";

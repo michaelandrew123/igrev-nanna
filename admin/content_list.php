@@ -7,12 +7,10 @@ include_once('./_common.php');
 if ($is_admin != 'super')
     alert('최고관리자만 접근 가능합니다.');
 
-$sql_common = " from nan_question a
-                left join nan_quiz b on (a.quiz_idx = b.quiz_idx)
-                left join nan_quiz_data_file c on (a.file_id = c.file_idx)
-                left join g5_member e on (b.mb_no = e.mb_no )";
+$sql_common = " from nan_quiz b
+                left join nan_quiz_data_file c on (b.file_id = c.file_idx)
+                left join g5_member e on (b.mb_id = e.mb_id )";
 // where b.del_yn = 'n'";
-
 
 
 $sql_search = " where (1) ";
@@ -20,7 +18,7 @@ $sql_search = " where (1) ";
 if ($stx) {
     $sql_search .= " and ( ";
     switch ($sfl) {
-        case "title":
+        case "quiz_subject":
             $sql_search .= " ({$sfl} like '{$stx}%') ";
             break;
         case "mb_id":
@@ -44,7 +42,7 @@ if ($page < 1) {
 } // 페이지가 없으면 첫 페이지 (1 페이지)
 $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
-$sql = " select *, b.reg_date as reg_date_ , b.quiz_idx as quiz_idx_ {$sql_common} {$sql_search} ";
+$sql = " select *, b.reg_date as reg_date_ , b.quiz_idx as quiz_idx_ , b.mb_id as mb_id_   {$sql_common} {$sql_search} ";
 $result = sql_query($sql);
 
 $g5['title'] = "컨텐츠 관리";
@@ -56,8 +54,8 @@ include_once('./admin.head.php');
 <form id="fsearch" name="fsearch" class="local_sch01 local_sch" method="get">
     <label for="sfl" class="sound_only">검색대상</label>
     <select name="sfl" id="sfl">
-        <option value="mb_id" <?php echo get_selected($sfl, "mb_id"); ?>>회원아이디</option>
-        <option value="title" <?php echo get_selected($sfl, "title"); ?>>제목</option>
+        <option value="b.mb_id" <?php echo get_selected($sfl, "mb_id_"); ?>>회원아이디</option>
+        <option value="quiz_subject" <?php echo get_selected($sfl, "quiz_subject"); ?>>제목</option>
     </select>
     <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
     <input type="text" name="stx" value="<?php echo $stx ?>" id="stx" required class="required frm_input">
@@ -87,20 +85,24 @@ include_once('./admin.head.php');
                                 echo "QUIZ";
                             } ?>
                         </h1>
-                        <h1 style="font-size:large;text-align: center; "><?php echo $row['title']; ?></h1>
-                        <h1 style="padding-top: 5px;">수정일 <?php echo $row['edit_date'] = date("Y-m-d"); ?></h1>
+                        <h1 style="font-size:large;text-align: center; "><?php echo $row['quiz_subject']; ?></h1>
+                        <h1 style="padding-top: 5px;">작성자 <a style=" color: blue !important;" href="./member_form.php?sst=&sod=&sfl=&stx=&page=&w=u&mb_id=<?= $row['mb_id_'] ?>"><?php echo $row['mb_id_']; ?></h1></a>
+                        <h1>수정일 <?php echo $row['edit_date'] = date("Y-m-d"); ?></h1>
                         <h1>생성일 <?php echo $row['reg_date_'] = date("Y-m-d"); ?></h1>
                         <h1>상태여부 <?php if ($row['del_yn'] == "y") {
-                                        echo "Delect";
+                                        echo "삭제됨";
                                     } else {
-                                        echo "Show";
+                                        echo "게시중";
                                     } ?>
                         </h1>
                         <!-- <h1>mb_no <?php echo $row['mb_no'] ?></h1> -->
                         <!-- 타입(1단일객관식,2복수객관식,3주관식,4wiki) -->
                         <div style=" text-align: center !important;">
-                            <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['quiz_idx_'] ?>,'del')" class="btn btn_02">
-                            <input type="button" name="act_button" id="button_action" value="Show" onclick="del(<?= $row['quiz_idx_'] ?>,'show')" class="btn btn_02">
+                            <?php if ($row['del_yn'] == "n") { ?>
+                                <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['quiz_idx_'] ?>,'del')" class="btn btn_01">
+                            <? } else { ?>
+                                <input type="button" name="act_button" id="button_action" value="Show" onclick="del(<?= $row['quiz_idx_'] ?>,'show')" class="btn btn_03">
+                            <? } ?>
                         </div>
                     </div>
                 </div>

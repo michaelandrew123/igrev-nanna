@@ -1773,7 +1773,9 @@ span.flatpickr-weekday,
 	margin: 0em;
 	color: var(--iq-white);
 	background: var(--iq-primary);
-	bottom:1.875em;
+	/*bottom:1.875em;*/
+
+	bottom:3.875em;
 	right: 1.563em;
 	width: 3.125em;
 	height: 3.125em;

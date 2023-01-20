@@ -29,8 +29,10 @@
 		   			<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Multiple</div> 
 		   		</a>
 
-		   		<div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight  uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Subjective</div> 
-		     </div>
+                <a href="/subjective.php">
+		   		    <div class="w-full inline-block px-6 py-6 bg-white text-gray-700 font-bold  leading-tight  uppercase rounded shadow-md  border border-slate-600   transition duration-150 ease-in-out  text-1xl text-center" style="filter: drop-shadow(5px 4px 2px rgb(0 0 0 / 61%))">Subjective</div>
+                </a>
+            </div>
 		</div>
 	</div>  
 

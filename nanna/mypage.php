@@ -4,44 +4,46 @@
 
 <div class="mt-6">
  	<div>
-		<p id="my-page" class="flex flex-row items-center">  
-		  <button class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500   hover:bg-white focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:bg-white dark:focus:ring-white justify-center bg-sky-500" type="button" rel="my-page" >My Paage</button> 
-		  <button class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:bg-white dark:focus:ring-white justify-center" type="button"  rel="help-center" >Help Center</button> 
+		<p id="my-page" class="flex flex-row items-center">
+            <a href="#" class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500   justify-center bg-sky-500">My Paage</a>
+            <a href="#" class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500  justify-center ">Help Center</a>
 		</p>
 	</div>
 </div>
 <div class="mt-6">
- 	<div class="flex flex-row justify-between">
-		
-		<div class="text-center">
-			<div>4</div>
-			<div class="uppercase text-sm">solving</div>
-		</div>
-		<div class="text-center">
-			<div>10</div>
-			<div class="uppercase text-sm">review</div>
-		</div>
-		<div class="text-center">
-			<div>4</div>
-			<div class="uppercase text-sm">writing</div>
-		</div>
-		<div class="text-center">
-			<div>4</div>
-			<div class="uppercase text-sm">mine</div>
-		</div>
-		<div class="text-center">
-			<div>4</div>
-			<div class="uppercase text-sm">fav</div>
-		</div>
+ 	<div class="flex flex-row justify-between" id="mypage-category">
+
+        <div class="px-2 text-center " rel="solving">
+            <div>4</div>
+            <div class="uppercase text-sm">solving</div>
+        </div>
+        <div class="px-2 text-center" rel="review">
+            <div>10</div>
+            <div class="uppercase text-sm">review</div>
+        </div>
+        <div class="px-2 text-center" rel="writing">
+            <div>4</div>
+            <div class="uppercase text-sm">writing</div>
+        </div>
+        <div class="px-2 text-center" rel="mine">
+            <div>4</div>
+            <div class="uppercase text-sm">mine</div>
+        </div>
+        <div class="px-2 text-center" rel="fav">
+            <div>4</div>
+            <div class="uppercase text-sm">fav</div>
+        </div>
 	</div>
 </div>
 
+<div class="mypage-panel">
+
 	<!-- solving -->
-	<div class=" mt-6">
+	<div class=" mt-6 hidden show" id="solving">
 			<div class="flex flex-row items-center justify-between "> 
 				<div class="flex flex-row">
 
-					<div class="uppercase font-medium"> resolving </div> 
+					<div class="uppercase font-medium"> solving </div>
 
 					   </div> 
 				<div class="flex flex-row gap-1">
@@ -112,7 +114,7 @@
 
 
 	<!-- review --> 
-	<div class=" mt-6">
+	<div class=" mt-6 hidden show" id="review">
 			<div class="flex flex-row items-center justify-between "> 
 				<div class="flex flex-row">
 
@@ -186,7 +188,7 @@
 
 
 	<!-- writing --> 
-	<div class=" mt-6">
+	<div class=" mt-6 hidden show" id="writing">
 			<div class="flex flex-row items-center justify-between "> 
 				<div class="flex flex-row">
 
@@ -259,7 +261,7 @@
 
  
 	<!-- mine --> 
-	<div class=" mt-6">
+	<div class=" mt-6 hidden show" id="mine">
 			<div class="flex flex-row items-center justify-between "> 
 				<div class="flex flex-row">
 
@@ -333,7 +335,7 @@
 
 
 	<!-- fav --> 
-	<div class=" mt-6">
+	<div class=" mt-6 mb-3 hidden show" id="fav">
 			<div class="flex flex-row items-center justify-between "> 
 				<div class="flex flex-row">
 
@@ -403,10 +405,70 @@
 				</div> 
 		</div> 
 	</div>
- 
+
+</div>
  <!-- Fixed Menu --> 
 <?php require_once "./nanna/inc/fixed-menu.php"; ?>
  
 <!-- Footer Section -->
 <?php require_once "./nanna/inc/footer.php"; ?>
 
+
+
+<script>
+
+
+
+    var myPageObject = ['solving', 'review', 'writing', 'mine', 'fav'];
+
+
+    $.each ( myPageObject, function (indexes, values){
+
+            console.log(values);
+    }
+    );
+
+
+
+    // var imgHeight = $('ul#home-recent-panel > li > img').height();
+    // $('div.home-arrow-left, div.home-arrow-right').height(imgHeight + 'px');
+
+    /*recent*/
+    // var hrpW = $('ul#home-recent-panel > li').width();
+    // var hrpLength = $("ul#home-recent-panel > li").length;
+    // var numRecent = 0;
+    // var defaultScrollHomePage = $('ul#home-recent-panel').scrollLeft();
+    // var num = 0;
+    // totalLengthCount = hrpW * hrpLength;
+    // totalLengthCountRecommend = hrpWRecommend * hrpLengthRecommend;
+    // $('ul.home-panel-recent').on('touchmove', function() {
+    //     defaultScrollHomePage = $('ul.home-panel-recent').scrollLeft();
+    //     if(defaultScrollHomePage >= hrpW){
+    //         $('div.home-arrow-left-recent').removeClass('hidden');
+    //     }else{
+    //         $('div.home-arrow-left-recent').addClass('hidden');
+    //     }
+    //     if(defaultScrollHomePage >= (totalLengthCount - (hrpW * 2) )){
+    //         $('div.home-arrow-right-recent').addClass('hidden');
+    //     }else{
+    //         $('div.home-arrow-right-recent').removeClass('hidden');
+    //     }
+    //     numRecent = defaultScrollHomePage
+    // });
+    /*end recent*/
+
+
+
+    $('#mypage-category > div').on('touchstart click', function () {
+        var data = $(this).attr('rel');
+        $('#mypage-category > div').removeClass('bg-sky-500');
+
+        $(this).addClass('bg-sky-500');
+
+        $('div.mypage-panel > div').removeClass('show');
+        $('div.mypage-panel > div#'+data).addClass('show');
+        //   console.log($(this).text());
+    })
+
+
+</script>

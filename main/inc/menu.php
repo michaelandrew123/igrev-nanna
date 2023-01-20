@@ -1,3 +1,4 @@
+
 <nav class="grow-0 skew-menu flex flex-row items-center gap-2 justify-center mt-6">
   <div class="relative flex flex-row items-center"> 
       <img class="w-5 h-5 absolute top-[50%] translate-y-[-50%] left-2"  src="/img/magnifying-glass-solid.svg"  /> 
@@ -31,11 +32,12 @@
         </a>
             <ul
               class="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownMenuButton1" >
+              <?php if($_SESSION['mb_id']){ ?>
               <li>
                   <a class="dropdown-item  bg-white text-black
                           border border-slate-700
                           font-medium
-                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent hover:bg-gray-100 uppercase" href="/mypage.php">
+                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent hover:bg-gray-100 uppercase" href="/main/mypage.php">
                     mypage
                   </a>
               </li>
@@ -43,7 +45,7 @@
                   <a class="dropdown-item  bg-white text-black
                           border border-slate-700
                           font-medium
-                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent hover:bg-gray-100 uppercase" href="/account.php">
+                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent hover:bg-gray-100 uppercase" href="/main/signup.php?w=u">
                     account
                   </a>
               </li>
@@ -51,10 +53,20 @@
                   <a href="/login.php" class="dropdown-item  bg-white text-black
                           border border-slate-700
                           font-medium
-                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent  hover:bg-gray-100 uppercase" href="/singup.php">
+                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent  hover:bg-gray-100 uppercase" href="/bs/logout.php">
                     logout
                   </a>
               </li>
+                <?php }else{ ?>
+                  <li>
+                      <a class="dropdown-item  bg-white text-black
+                          border border-slate-700
+                          font-medium
+                          text-xs  py-2 px-7  block w-full whitespace-nowrap bg-transparent hover:bg-gray-100 uppercase" href="/main/login.php">
+                          login
+                      </a>
+                  </li>
+                <?php } ?>
           </ul>
       <?php  } ?>
     </li> 

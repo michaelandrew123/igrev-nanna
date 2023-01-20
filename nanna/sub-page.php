@@ -5,31 +5,31 @@
 <div class="mt-6">
  	<div>
 		<p id="my-page" class="flex flex-row items-center">  
-		  <button class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500   hover:bg-white focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:bg-white dark:focus:ring-white justify-center bg-sky-500" type="button" rel="my-page" >My Paage</button> 
-		  <button class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:bg-white dark:focus:ring-white justify-center" type="button"  rel="help-center" >Help Center</button> 
+		  <a href="#" class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500   justify-center bg-sky-500">My Paage</a>
+		  <a href="#" class="w-full inline-flex items-center px-2 py-2.5 text-sm font-medium text-center border border-slate-500  justify-center ">Help Center</a>
 		</p>
 	</div>
 </div>
 <div class="mt-6">
- 	<div class="flex flex-row justify-between">
+ 	<div class="flex flex-row justify-between select-none" id="sub-page-category">
 		
-		<div class="text-center">
+		<div class="px-2 text-center " rel="solving">
 			<div>4</div>
 			<div class="uppercase text-sm">solving</div>
 		</div>
-		<div class="text-center">
+		<div class="px-2 text-center" rel="review">
 			<div>10</div>
 			<div class="uppercase text-sm">review</div>
 		</div>
-		<div class="text-center">
+		<div class="px-2 text-center" rel="writing">
 			<div>4</div>
 			<div class="uppercase text-sm">writing</div>
 		</div>
-		<div class="text-center">
+		<div class="px-2 text-center" rel="mine">
 			<div>4</div>
 			<div class="uppercase text-sm">mine</div>
 		</div>
-		<div class="text-center">
+		<div class="px-2 text-center" rel="fav">
 			<div>4</div>
 			<div class="uppercase text-sm">fav</div>
 		</div>
@@ -78,7 +78,34 @@
 					</a>  
 				</div>
 				<div class="flex flex-row items-center gap-2">
-					<img class="w-4 h-4" src="./nanna/img/magnifying-glass-solid.svg"  />
+
+
+                    <div class="flex flex-row items-center">
+                        <input
+                            type="text"
+                            class="
+                                  block
+                                  w-full
+                                  px-2
+                                  py-1
+                                  text-sm
+                                  font-normal
+                                  text-gray-700
+                                  bg-white bg-clip-padding
+                                  border-b border-solid border-gray-300
+                                  rounded
+                                  transition
+                                  ease-in-out
+                                  m-0
+                                  focus:text-gray-700 focus:bg-white focus:border-b focus:border-blue-600 focus:outline-none
+                                "
+                                placeholder="search"
+                        />
+                        <img class="w-4 h-4" src="./nanna/img/magnifying-glass-solid.svg"  />
+                    </div>
+
+
+
 					<a href="#" class="dropdown-toggle" id="sort-dropdown" data-bs-toggle="dropdown" aria-expanded="false" >
 
       					
@@ -289,4 +316,34 @@
  
 <!-- Footer Section -->
 <?php require_once "./nanna/inc/footer.php"; ?>
+
+<script>
+    
+    $('#sub-page-category > div').on('touchstart click', function () {
+        var data = $(this).attr('rel');
+        $('#sub-page-category > div').removeClass('bg-sky-500');
+
+        $('p.sort-text1').text(data);
+
+
+        $(this).addClass('bg-sky-500');
+     //   console.log($(this).text());
+    })
+
+
+    /* sub page */
+    $('ul#sort-items1 > li > a').on('touchstart', function(){
+        $('p.sort-text1').text($(this).text());
+    })
+
+
+    /* sub page */
+    $('ul#sort-items2 > li > a').on('touchstart', function(){
+        $('p.sort-text2').text($(this).text());
+    })
+
+
+
+
+</script>
 

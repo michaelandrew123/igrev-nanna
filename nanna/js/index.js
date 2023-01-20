@@ -59,19 +59,11 @@ $('div#add-archived-thumbnail > ul > li > div > img').on('touchstart', function(
 
 
 
-/* sub page */
-$('ul#sort-items1 > li > a').on('touchstart', function(){ 
-	$('p.sort-text1').text($(this).text());
+$('p#my-page > a').on('touchstart click', function(){
+	console.log('my page')
+	$('p#my-page > a.bg-sky-500'). removeClass('bg-sky-500');
+	$(this).addClass('bg-sky-500');
 })
-
- 
-/* sub page */
-$('ul#sort-items2 > li > a').on('touchstart', function(){ 
-	$('p.sort-text2').text($(this).text());
-})
-
-
-
 
 //
 //

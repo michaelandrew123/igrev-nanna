@@ -14,9 +14,10 @@ if ($is_admin != 'super')
 
 $sql_common = " from nan_report a
                 left join nan_quiz b on (a.r_quiz_idx = b.quiz_idx)
-                left join nan_comment c on (a.r_co_id = c.co_id)
+                left join nan_comment c on (a.r_co_idx = c.co_idx)
                 left join nan_question d on (a.r_quiz_idx = d.quiz_idx)
-                left join g5_member e on (c.co_mb_no = e.mb_no ||  e.mb_no = b.mb_no )";
+                left join g5_member e on (c.co_mb_no = e.mb_no ||  e.mb_no = b.mb_id)
+                left join g5_member f on (a.r_mb_no_ = f.mb_no)";
 
 $sql_search = " where (1) ";
 
@@ -36,6 +37,7 @@ if ($stx) {
     $sql_search .= " ) ";
 }
 // 테이블의 전체 레코드수만 얻음
+
 $sql = " select count(*) as cnt {$sql_common}  {$sql_search} ";
 $row_ = sql_fetch($sql);
 $total_count = $row_['cnt'];
@@ -47,7 +49,7 @@ if ($page < 1) {
 } // 페이지가 없으면 첫 페이지 (1 페이지)
 $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
-$sql = " select *, b.reg_date as reg_date_ , b.quiz_idx as quiz_idx_ {$sql_common} {$sql_search} ";
+$sql = " select *, b.reg_date as reg_date_ , b.quiz_idx as quiz_idx_ , f.mb_id as f_mb_id_ , e.mb_id as mb_id_ , e.mb_nick as mb_nick_ {$sql_common} {$sql_search} ";
 $result = sql_query($sql);
 
 ?>
@@ -60,8 +62,8 @@ $result = sql_query($sql);
 
     <label for="sfl" class="sound_only">검색대상</label>
     <select name="sfl" id="sfl">
-        <option value="mb_id" <?php echo get_selected($sfl, "mb_id"); ?>>회원아이디</option>
-        <option value="mb_nick" <?php echo get_selected($sfl, "mb_nick"); ?>>닉네임</option>
+        <option value="e.mb_id" <?php echo get_selected($sfl, "mb_id_"); ?>>회원아이디</option>
+        <option value="e.mb_nick" <?php echo get_selected($sfl, "mb_nick_"); ?>>닉네임</option>
     </select>
     <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
     <input type="text" name="stx" value="<?php echo $stx ?>" id="stx" required class="required frm_input">
@@ -84,6 +86,7 @@ $result = sql_query($sql);
                 <th scope="col">닉네임</th>
                 <th scope="col">타입</th>
                 <th scope="col">내용</th>
+                <th scope="col">신고자</th>
                 <th scope="col">수신일</th>
                 <th scope="col">상태</th>
                 <th scope="col">관리</th>
@@ -94,9 +97,13 @@ $result = sql_query($sql);
                 $bg = 'bg' . ($i % 2);
             ?>
                 <tr class="<?php echo $bg; ?>">
-                    <td class="td_id"><?php echo $row['r_num']; ?></td>
-                    <td class="td_id"><?php echo $row['mb_id']; ?></td>
-                    <td class="td_id"><?php echo $row['mb_nick']; ?></td>
+                    <td class="td_id"><?php echo $row['r_idx']; ?></td>
+                    <td class="td_id">
+                        <a style=" color: blue !important;" href="./member_form.php?sst=&sod=&sfl=&stx=&page=&w=u&mb_id=<?= $row['mb_id_'] ?>">
+                            <?php echo $row['mb_id_']; ?>
+                        </a>
+                    </td>
+                    <td class="td_id"><?php echo $row['mb_nick_']; ?></td>
                     <?php if ($row['title'] == null) {     ?>
                         <td>
                             <h1>댓글</h1>
@@ -108,16 +115,16 @@ $result = sql_query($sql);
                         </td>
                         <td class="td_left"><?php echo htmlspecialchars2($row['title']); ?></td>
                     <?php } ?>
+                    <td class="td_id"><?php echo $row['f_mb_id_']; ?></td>
                     <td class="td_id"><?php echo $row['r_regdate']; ?></td>
-
                     <?php if ($row['title'] == null) {  ?>
                         <?php if ($row['co_del_yn'] == 'y') {  ?>
                             <td> 처리 완료</td>
                         <?php } else { ?>
-                            <td> 처리 대기</td>
+                            <td style=" color : blue;"> 처리 대기</td>
                         <?php } ?>
                         <td class="td_mng td_mng_l">
-                            <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['co_id'] ?>,'co_del')" class="btn btn_02">
+                            <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['co_idx'] ?>,'co_del')" class="btn btn_01">
                         </td>
                     <?php } else { ?>
                         <?php if ($row['del_yn'] == 'y') {  ?>
@@ -126,7 +133,7 @@ $result = sql_query($sql);
                             <td style=" color : blue;"> 처리 대기</td>
                         <?php } ?>
                         <td class="td_mng td_mng_l">
-                            <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['quiz_idx_'] ?>,'del')" class="btn btn_02">
+                            <input type="button" name="act_button" id="button_action" value="Delect" onclick="del(<?= $row['quiz_idx_'] ?>,'del')" class="btn btn_01">
                         </td>
                     <?php } ?>
 
@@ -151,7 +158,7 @@ include_once(G5_ADMIN_PATH . '/admin.tail.php');
 <script>
     function del(id, action) {
         var quiz_idx = id;
-        var co_id = id;
+        var co_idx = id;
         var action = action;
 
         $.ajax({
@@ -159,7 +166,7 @@ include_once(G5_ADMIN_PATH . '/admin.tail.php');
             method: "POST",
             data: {
                 quiz_idx: quiz_idx,
-                co_id: co_id,
+                co_idx: co_idx,
                 action: action
             },
             dataType: "json",

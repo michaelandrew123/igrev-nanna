@@ -1,4 +1,4 @@
-<?php  require_once "./inc/header-v1.php";?> 
+<?php  require_once "./nanna/inc/header-v1.php";?>
  
   
 <!--  --> 
@@ -98,7 +98,7 @@
 
 	<div class="flex-none">
 
-		<div class="flex flex-row justify-between fixed bottom-5" id="arrow" style="width: 95%">
+		<div class="flex flex-row justify-between" id="arrow" style="width: 95%">
 
 			<div class="rounded-full bg-black text-white text-4xl w-10 h-10 flex items-center justify-center font-bold cursor-pointer" id="arrow-left" > < </div>
 			<div class="rounded-full bg-black text-white text-4xl w-10 h-10 flex items-center justify-center font-bold cursor-pointer" id="arrow-right" > > </div>
@@ -118,7 +118,7 @@
 
  
  
-<?php require_once "./inc/footer.php"; ?>
+<?php require_once "./nanna/inc/footer.php"; ?>
 
 <script type="text/javascript"> 
 	var num = 1; 
