@@ -269,64 +269,49 @@
 
 
                 <ul class="library-panel-section grid grid-rows-2 grid-flow-col gap-2 overflow-x-auto min-[639px]:overflow-x-auto  ">
-                    <li>
-                        <img class="w-full h-[7rem]  rounded-lg" src="https://cdn.vox-cdn.com/thumbor/HXwq0C1ADjVAGMG2XMJo5dMbEF4=/0x0:5316x3460/1200x0/filters:focal(0x0:5316x3460):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/16234951/jw3_d42_13875_r.jpg" alt="Mountain">
+                    <li class=" flex items-center flex-col justify-center shadow-lg shadow-white-500/50  ">
+                        <img class="w-full rounded-lg" src="https://d3kzx7mqemhf0.cloudfront.net/catchtable/comm_2311710455207542.webp?small400" alt="Mountain">
                         <div class="px-0 py-2 ">
-                            <div class=" mb-0">John Wick 3</div>
-                            <p class="text-gray-700 text-base">
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star text-[#ffc45f]" ></span>
-                            <span class="fa fa-star"></span>    Rating
+                            <div class="text-lg font-semibold mb-0">라프레블</div>
+                            <p class="text-gray-500 text-sm">
+                              다이닝바 • 서울숲
                             </p>
+
                         </div>
                     </li>
-
-                    <li>
-                        <img class="w-full h-[7rem]  rounded-lg" src="https://cdn.vox-cdn.com/thumbor/ab7GeC585ehvC-Y4zEkqUcwOa9c=/0x0:2067x1377/1200x800/filters:focal(869x524:1199x854)/cdn.vox-cdn.com/uploads/chorus_image/image/54120135/your_name_oped.0.jpg" alt="Mountain">
-                        <div class="px-0 py-2">
-                            <div class=" mb-0">Your Name</div>
-                            <p class="text-gray-700 text-base">
-                             <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star " ></span>
-                            <span class="fa fa-star"></span>
-                                Rating
+                    <li class=" shadow-lg  drop-shadow-white">
+                        <img class="w-full  rounded-lg" src="https://d3kzx7mqemhf0.cloudfront.net/catchtable/comm_2311710455231058.webp?small400" alt="Mountain">
+                        <div class="px-0 py-2 ">
+                            <div class="text-lg  font-semibold mb-0">라프레블</div>
+                            <p class="text-gray-500 text-sm">
+                              다이닝바 • 서울숲
                             </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img class="w-full h-[7rem] rounded-lg" src="https://6.vikiplatform.com/image/bf7da81a765c41fa944630749205f3ec.jpg?x=b&a=0x0" 
-                        alt="Mountain">
-                        <div class="px-0 py-2">
                             
-                             <div class=" mb-0">Train to Busan</div>
-                           <p class="text-gray-700 text-base">
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star text-[#ffc45f]" ></span>
-                            <span class="fa fa-star"></span>   Rating
+                        </div>
+                    </li>
+                    <li class=" shadow-lg  drop-shadow-white">
+                        <img class="w-full  rounded-lg" src="https://d3kzx7mqemhf0.cloudfront.net/catchtable/comm_2311710455246634.webp?small400" alt="Mountain">
+                        <div class="px-0 py-2 ">
+                            <div class="text-lg  font-semibold mb-0">라프레블</div>
+                            <p class="text-gray-500 text-sm">
+                              다이닝바 • 서울숲
                             </p>
+                            
+                        </div>
+                    </li>
+                    <li class=" shadow-lg  drop-shadow-white">
+                        <img class="w-full  rounded-lg" src="https://d3kzx7mqemhf0.cloudfront.net/catchtable/comm_2311710455207542.webp?small400" alt="Mountain">
+                        <div class="px-0 py-2 ">
+                            <div class="text-lg  font-semibold mb-0">라프레블</div>
+                            <p class="text-gray-500 text-sm">
+                              다이닝바 • 서울숲
+                            </p>
+                            
                         </div>
                     </li>
 
-                    <li>
-                        <img class="w-full h-[7rem] rounded-lg" src="https://material.asset.catchplay.com/NBC-IN-001-A1187/artworks/posters/NBC-IN-001-A1187-P1200.jpg?hash=1656562667" alt="Mountain">
-                        <div class="px-0 py-2">
-                            <div class="text-[14.7px] mb-0">How to train your dragon</div>
-                            <p class="text-gray-700 text-base">
-                               <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star checked text-[#ffc45f]"></span>
-                            <span class="fa fa-star text-[#ffc45f]" ></span>
-                            <span class="fa fa-star"></span> Rating
-                            </p>
-                        </div>
-                    </li>
+                   
+
                 </ul>
 
 
