@@ -1,54 +1,4 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Streamit</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Typography CSS -->
-    <link rel="stylesheet" href="css/typography.css">
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Responsive -->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <!-- star -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-
-    <style>
-        .img-png-to-white{
-            filter: invert(100%) sepia(13%) saturate(20%) hue-rotate(130deg) brightness(90%) contrast(80%);
-        }
-
-        .footer-fixed{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-        }
-
-    </style>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body >
-<!-- loader Start -->
-<div id="loading">
-    <div id="loading-center">
-    </div>
-</div>
-<!-- loader END -->
-<!-- Header -->
-<div class="page" style="max-width: 360px;">
+<?php require_once('./inc-stremit/header.php'); ?>
     <header id="main-header">
         <div class="main-header">
             <div class="container-fluid">
@@ -214,7 +164,7 @@
                 <div class="mt-6 mb-6 flex flex-row justify-between">
                     <div class="flex flex-row items-center gap-2">
 
-                        <a href="#" class="dropdown-toggle" id="sort-dropdown" data-bs-toggle="dropdown" aria-expanded="false" >
+                        <a href="#" class="" id="sort-dropdown" >
                             <img src="./img/filter.png" class="w-6 h-5 img-png-to-white" />
 
                             <ul id="sort-items" class="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="sort-dropdown" >
@@ -268,8 +218,10 @@
     <!--            -->
 
 
+
+
                 <ul class="library-panel-section grid grid-rows-2 grid-flow-col gap-2 overflow-x-auto min-[639px]:overflow-x-auto  ">
-                    <li class=" flex items-center flex-col justify-center shadow-lg shadow-white-500/50  ">
+                    <li class=" flex items-center flex-col justify-center shadow-lg shadow-white-500/50 ">
                         <img class="w-full rounded-lg" src="https://d3kzx7mqemhf0.cloudfront.net/catchtable/comm_2311710455207542.webp?small400" alt="Mountain">
                         <div class="px-0 py-2 ">
                             <div class="text-lg font-semibold mb-0">라프레블</div>
@@ -286,7 +238,6 @@
                             <p class="text-gray-500 text-sm">
                               다이닝바 • 서울숲
                             </p>
-                            
                         </div>
                     </li>
                     <li class=" shadow-lg  drop-shadow-white">
@@ -320,103 +271,4 @@
         </section>
     </main>
 
-    <footer id="contact" class="footer-one iq-bg-dark relative">
-        <div id="footer-menu"  class="flex flex-row justify-evenly  items-center justify-center w-full footer-fixed">
-            <a href="#" class="btn btn-hover   w-full py-3"  >
-                <span class="genres-btn">Home</span>
-            </a>
-            <a href="#" class="btn btn-hover   w-full py-3" >
-                <span class="genres-btn">Library</span>
-            </a>
-            <a href="#" class="btn btn-hover   w-full py-3 " >
-                <span class="genres-btn">Comm</span>
-            </a>
-        </div>
-    </footer>
-
-</div>
-<!--<div class="rtl-box">-->
-<!--    <button type="button" id="flip" class="btn btn-light rtl-btn">-->
-<!--        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 20 20" fill="white">-->
-<!--            <path fill-rule="evenodd"-->
-<!--                  d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"-->
-<!--                  clip-rule="evenodd" />-->
-<!--        </svg>-->
-<!--    </button>-->
-<!--    <div class="rtl-panel" id="panel">-->
-<!--        <ul class="modes">-->
-<!--            <li class="dir-btn" data-mode="rtl" data-active="false" data-value="ltr"><a href="#">LTR</a></li>-->
-<!--            <li class="dir-btn" data-mode="rtl" data-active="true" data-value="rtl"><a href="#">RTL</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--</div>-->
-<!-- MainContent End-->
-<!-- back-to-top -->
-<div id="back-to-top">
-    <a class="top" href="#top" id="top" style="bottom:3.875em;"> <i class="fa fa-angle-up"></i> </a>
-</div>
-
-
-
-
-
-<!-- back-to-top End -->
-<!-- jQuery, Popper JS -->
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="js/bootstrap.min.js"></script>
-<!-- owl carousel Js -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- select2 Js -->
-<script src="js/select2.min.js"></script>
-<!-- Magnific Popup-->
-<script src="js/jquery.magnific-popup.min.js"></script>
-<!-- Custom JS-->
-<script src="js/custom.js"></script>
-<script src="js/rtl.js"></script>
-<!-- gsap JS -->
-<script src="plugin/gsap/gsap.min.js"></script>
-<script src="js/gsap-scripts.js"></script>
-<!-- Swiper JS -->
-<script src="js/swiper.min.js"></script>
-<script src="js/swiper.js"></script>
-
-<script>
-
-   var wis = window.innerHeight;
-  // var dh = $(document).height();
-   var bodyH = $('body').height();
-
-   var footerFixedH = $('#footer-menu').height(); //not used
-   $( window ).scroll(function() {
-       wisT = wis + window.scrollY;
-       // if($('#library-main-page').height() > 0){
-       //    dh = $('#library-main-page').height() + $('nav').height();
-       // }
-       if($('.page').height() > 0){
-           dh = $('.page').height();
-       }
-       if (wisT < dh) {
-           $('#footer-menu').addClass('footer-fixed');
-       }else{
-           $('#footer-menu').removeClass('footer-fixed');
-
-       }
-   });
-
-
-   /* Archived Grid btn */
-   $('#library-grid').on('touchstart click', function(){
-       $('ul.library-panel-section').removeClass('flex flex-row flex-wrap justify-center');
-       $('ul.library-panel-section').addClass('grid grid-rows-2 grid-flow-col');
-   })
-
-   /* Archived Grid List */
-   $('#library-list').on('touchstart click', function(){
-       $('ul.library-panel-section').removeClass('grid grid-rows-2 grid-flow-col');
-       $('ul.library-panel-section').addClass('flex flex-row flex-wrap justify-center');
-   })
-</script>
-</body>
-</html>
+<?php require_once('./inc-stremit/footer.php') ?>
